@@ -13,7 +13,7 @@ M.defaults = {
 		-- syntax group styles
 		-- :help nvim_set_hl -- value is valid attr-list value
 		comments = { italic = true },
-		keywords = { italic = true },
+		keywords = { italic = false },
 		functions = {},
 		variables = {},
 
