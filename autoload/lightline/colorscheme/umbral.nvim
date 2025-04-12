@@ -1,0 +1,2 @@
+let s:palette = v:lua.require("lightline.colorscheme.umbral")
+let g:lightline#colorscheme#umbral#palette = lightline#colorscheme#fill(s:palette)
