@@ -15,7 +15,7 @@ M.plugins = {
   -- ["copilot.lua"]                   = "copilot",
   -- ["dashboard-nvim"]                = "dashboard",
   -- ["flash.nvim"]                    = "flash",
-  -- ["fzf-lua"]                       = "fzf",
+  ["fzf-lua"]                       = "fzf",
   -- ["gitsigns.nvim"]                 = "gitsigns",
   -- ["grug-far.nvim"]                 = "grug-far",
   -- ["headlines.nvim"]                = "headlines",
@@ -37,7 +37,7 @@ M.plugins = {
   -- ["mini.indentscope"]              = "mini_indentscope",
   -- ["mini.jump"]                     = "mini_jump",
   -- ["mini.map"]                      = "mini_map",
-  -- ["mini.notify"]                   = "mini_notify",
+  ["mini.notify"]                   = "mini_notify",
   -- ["mini.operators"]                = "mini_operators",
   -- ["mini.pick"]                     = "mini_pick",
   -- ["mini.starter"]                  = "mini_starter",
@@ -69,7 +69,7 @@ M.plugins = {
   -- ["vim-illuminate"]                = "illuminate",
   -- ["vim-sneak"]                     = "sneak",
   -- ["vimwiki"]                       = "vimwiki",
-  -- ["which-key.nvim"]                = "which-key",
+  ["which-key.nvim"]                = "which-key",
   -- ["yanky.nvim"]                    = "yanky"
 }
 

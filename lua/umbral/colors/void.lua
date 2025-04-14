@@ -2,7 +2,6 @@
 local palette = {
 	black = "#0a0214",
 	red = "#da3c69",
-	-- green = "#4129a1",
 	green = "#7644fa",
 	yellow = "#ffd369",
 	blue = "#6422d8",
@@ -44,7 +43,7 @@ local palette = {
 	fg_dark = "#291f2e",
 	mid_dark = "#2f3037",
 	lsp_hint = "#404099",
-	bg_visual = "#445198",
+	bg_visual = "#442198",
 	bg_popup = "#0a0214",
 	bg_statusline = "#1f2335",
 }
