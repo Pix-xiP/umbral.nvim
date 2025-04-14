@@ -2,7 +2,8 @@
 local palette = {
 	black = "#0a0214",
 	red = "#da3c69",
-	green = "#4129a1",
+	-- green = "#4129a1",
+	green = "#7644fa",
 	yellow = "#ffd369",
 	blue = "#6422d8",
 	magenta = "#5228a6",
@@ -34,10 +35,12 @@ local palette = {
 		change = "#6122d8",
 	},
 
+	conceal = "#4129a1",
+
 	-- Testing Colours form Shado in here
 	border = "#1d202f",
 	bg_sidebar = "#111119",
-	fg_gutter = "#171526",
+	fg_gutter = "#221a37",
 	fg_dark = "#291f2e",
 	mid_dark = "#2f3037",
 	lsp_hint = "#404099",
