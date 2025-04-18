@@ -6,7 +6,7 @@ M.url = "https://github.com/ibhagwan/fzf-lua"
 function M.get(c)
   -- stylua: ignore
   return {
-    FzfLuaBorder        = { fg = c.border_highlight, bg = c.black},
+    FzfLuaBorder        = { bg = c.black, fg = c.border_highlight, },
     FzfLuaCursor        = "IncSearch",
     FzfLuaDirPart       = { fg = c.dark_fg},
     FzfLuaFilePart      = "FzfLuaFzfNormal",
@@ -14,7 +14,6 @@ function M.get(c)
     FzfLuaFzfNormal     = { fg = c.fg },
     FzfLuaFzfPointer    = { fg = c.bright_magenta},
     FzfLuaFzfSeparator  = { fg = c.bright_red, bg = c.black},
-    -- FzfLuaFzfSeparator  = { fg = c.orange, bg = c.black },
     FzfLuaHeaderBind    = "@punctuation.special",
     FzfLuaHeaderText    = "Title",
     FzfLuaNormal        = { fg = c.fg, bg = c.black},
