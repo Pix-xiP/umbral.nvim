@@ -15,8 +15,8 @@ function M.get(style)
 	}
 
 	hl.insert = {
-		a = { bg = colors.green, fg = colors.black },
-		b = { bg = colors.fg_gutter, fg = colors.green },
+		a = { bg = colors.primary, fg = colors.black },
+		b = { bg = colors.fg_gutter, fg = colors.primary },
 	}
 
 	hl.command = {
@@ -35,8 +35,8 @@ function M.get(style)
 	}
 
 	hl.terminal = {
-		a = { bg = colors.green1, fg = colors.black },
-		b = { bg = colors.fg_gutter, fg = colors.green1 },
+		a = { bg = colors.primary, fg = colors.black },
+		b = { bg = colors.fg_gutter, fg = colors.primary },
 	}
 
 	hl.inactive = {

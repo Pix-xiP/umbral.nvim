@@ -30,7 +30,7 @@ function M.setup(opts)
 	colors.none = "NONE"
 
 	colors.diff = {
-		add = util.blend_bg(colors.green, 0.15),
+		add = util.blend_bg(colors.primary, 0.15),
 		delete = util.blend_bg(colors.red, 0.15),
 		change = util.blend_bg(colors.blue, 0.15),
 		text = colors.bright_blue,
@@ -38,7 +38,7 @@ function M.setup(opts)
 
 	colors.git.ignore = colors.comment
 	colors.black = util.blend_bg(colors.bg, 0.8, "#000000")
-	colors.border_highlight = util.blend_bg(colors.blue, 0.8)
+	colors.border_highlight = util.blend_bg(colors.border_color, 0.8)
 	colors.border = colors.black
 
 	-- popups and statusline always get a dark background
@@ -51,8 +51,8 @@ function M.setup(opts)
 		or colors.bg
 
 	colors.bg_float = opts.styles.floats == "transparent" and colors.none
-		or opts.styles.floats == "dark" and colors.dark_bg
-		or colors.bg
+		or opts.styles.floats == "dark" and colors.black
+		or colors.black
 
 	colors.bg_visual = util.blend_bg(colors.cyan, 0.4)
 	colors.bg_search = colors.cyan
@@ -62,15 +62,15 @@ function M.setup(opts)
 	colors.error = colors.red
 	colors.todo = colors.bright_cyan
 	colors.warning = colors.yellow
-	colors.info = colors.cyan
+	colors.info = colors.primary
 	colors.hint = colors.blue
 
 	colors.rainbow = {
-		colors.green,
-		colors.magenta,
 		colors.blue,
-		colors.cyan,
+		colors.primary,
+		colors.magenta,
 		colors.bright_blue,
+		colors.cyan,
 		colors.yellow,
 		colors.bright_red,
 		colors.red,
@@ -83,8 +83,8 @@ function M.setup(opts)
 		black_bright   = colors.bright_black,
 		red            = colors.red,
 		red_bright     = colors.bright_red,
-    green          = colors.green,
-    green_bright   = util.brighten(colors.green),
+    green          = colors.primary,
+    green_bright   = util.brighten(colors.primary),
     yellow         = colors.yellow,
     yellow_bright  = util.brighten(colors.yellow),
     blue           = colors.blue,

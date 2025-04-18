@@ -2,19 +2,19 @@
 local palette = {
 	black = "#0a0214",
 	red = "#da3c69",
-	green = "#7644fa",
+	primary = "#7644fa", -- green
 	yellow = "#ffd369",
 	blue = "#6422d8",
-	magenta = "#5228a6",
-	cyan = "#3248f0",
+	magenta = "#6c4dff",
+	cyan = "#3848f8",
 	white = "#9971c1",
 	bright_black = "#414262",
 	bright_red = "#be3888",
-	bright_green = "#e9729d",
+	orange = "#e9729d", -- bright green
 	bright_yellow = "#ffd369",
-	bright_blue = "#5494ff",
+	bright_blue = "#8c6dff",
 	bright_magenta = "#9933dd",
-	bright_cyan = "#116dff",
+	bright_cyan = "#586afa",
 	bright_white = "#b99de1",
 
 	comment = "#6863a6",
@@ -36,7 +36,8 @@ local palette = {
 
 	conceal = "#4129a1",
 
-	-- Testing Colours form Shado in here
+	-- TODO: Alot of these to be sorted out.
+	border_color = "#6422d8",
 	border = "#1d202f",
 	bg_sidebar = "#111119",
 	fg_gutter = "#221a37",
