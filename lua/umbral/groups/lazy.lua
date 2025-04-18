@@ -8,7 +8,7 @@ function M.get(c, opts)
   -- stylua: ignore
   local pallete = {
     LazyProgressDone = { fg = c.bright_magenta, bold = true },
-    LazyProgressTodo = { fg = c.fg_dark, bold = true        },
+    LazyProgressTodo = { fg = c.fg,             bold = true },
   }
 	return pallete
 end
