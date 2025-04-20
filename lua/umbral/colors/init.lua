@@ -72,7 +72,7 @@ function M.setup(opts)
 		colors.bright_blue,
 		colors.cyan,
 		colors.yellow,
-		colors.bright_red,
+		colors.orange,
 		colors.red,
 	}
 
