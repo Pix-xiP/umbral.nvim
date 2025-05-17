@@ -26,7 +26,7 @@ local palette = {
 	dark_fg         = "#7a4baa",
 
 	cursor_color    = "#b99de1",
-	selection_bg    = "#1c0638",
+	selection_bg    = "#1c0655", -- #1c0638 original
 	selection_fg    = "#ee6699",
 
 	git = {
