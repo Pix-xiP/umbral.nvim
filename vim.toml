@@ -1,21 +1,21 @@
 [selene]
-base = "lua51"
-name = "vim"
+	base = "lua51"
+	name = "vim"
 
 [vim]
-any = true
+	any = true
 
 [jit]
-any = true
+	any = true
 
 [assert]
-any = true
+	any = true
 
 [describe]
-any = true
+	any = true
 
 [it]
-any = true
+	any = true
 
 [before_each.args]
-any = true
+	any = true
