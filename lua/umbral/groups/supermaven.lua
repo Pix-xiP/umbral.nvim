@@ -7,7 +7,7 @@ function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
   local ret = {
-    SupermavenSuggestion = { fg = c.terminal.black },
+    SupermavenSuggestion = { fg = c.terminal.black_bright},
   }
 	return ret
 end

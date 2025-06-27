@@ -7,7 +7,7 @@ function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
   local ret = {
-    CodeiumSuggestion = { fg = c.terminal.black},
+    CodeiumSuggestion = { fg = c.terminal.black_bright},
   }
 
 	return ret
