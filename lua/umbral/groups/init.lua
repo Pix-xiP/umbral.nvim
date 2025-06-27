@@ -16,7 +16,7 @@ M.plugins = {
   ["dashboard-nvim"]                = "dashboard",
   ["flash.nvim"]                    = "flash",
   ["fzf-lua"]                       = "fzf",
-  -- ["gitsigns.nvim"]                 = "gitsigns",
+  ["gitsigns.nvim"]                 = "gitsigns",
   ["grug-far.nvim"]                 = "grug-far",
   -- ["headlines.nvim"]                = "headlines",
   -- ["hop.nvim"]                      = "hop",
@@ -148,6 +148,7 @@ function M.setup(colors, opts)
 	local ret = cache and vim.deep_equal(inputs, cache.inputs) and cache.groups
 
 	if not ret then
+		---@diagnostic disable-next-line: cast-local-type
 		ret = {}
 		-- merge highlights
 		for group in pairs(groups) do
