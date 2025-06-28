@@ -7,12 +7,12 @@ function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
   local pallete = {
-    WhichKey          = { bg = c.black, fg = c.yellow},
-    WhichKeyGroup     = { bg = c.black, fg = c.cyan,},
+    WhichKey          = { bg = c.black, fg = c.yellow  },
+    WhichKeyGroup     = { bg = c.black, fg = c.cyan,   },
     WhichKeyDesc      = { bg = c.black, fg = c.magenta },
     WhichKeySeparator = { bg = c.black, fg = c.comment },
-    WhichKeyNormal    = { bg = c.black },
-    WhichKeyValue     = { bg = c.black, fg = c.dark_fg},
+    WhichKeyNormal    = { bg = c.black                   },
+    WhichKeyValue     = { bg = c.black, fg = c.dark_fg },
   }
 
 	return pallete
