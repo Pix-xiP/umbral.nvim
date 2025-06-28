@@ -7,12 +7,12 @@ function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
   local palette = {
-    VimwikiLink =       { fg = c.cyan, bg = c.none },
+    VimwikiLink =       { fg = c.bright_cyan, bg = c.none },
     VimwikiHeaderChar = { fg = c.yellow, bg = c.none },
     VimwikiHR =         { fg = c.yellow, bg = c.none },
-    VimwikiList =       { fg = c.red, bg = c.none },
-    VimwikiTag =        { fg = c.blue, bg = c.none },
-    VimwikiMarkers =    { fg = c.cyan, bg = c.none },
+    VimwikiList =       { fg = c.orange, bg = c.none },
+    VimwikiTag =        { fg = c.cyan, bg = c.none },
+    VimwikiMarkers =    { fg = c.bright_cyan, bg = c.none },
   }
 
 	for i, color in ipairs(c.rainbow) do
