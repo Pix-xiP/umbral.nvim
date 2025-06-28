@@ -68,7 +68,7 @@ M.plugins = {
   -- ["vim-glyph-palette"]             = "glyph-palette",
   -- ["vim-illuminate"]                = "illuminate",
   ["vim-sneak"]                     = "sneak",
-  -- ["vimwiki"]                       = "vimwiki",
+  ["vimwiki"]                       = "vimwiki",
   ["which-key.nvim"]                = "which-key",
   ["yanky.nvim"]                    = "yanky"
 }
