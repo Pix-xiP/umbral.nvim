@@ -6,7 +6,7 @@ M.url = "https://github.com/nvim-telescope/telescope.nvim"
 function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
-  local ret = {
+  local palette = {
     TelescopeBorder         = { fg = c.border_highlight, bg = c.bg_float },
     TelescopeNormal         = { fg = c.fg,               bg = c.bg_float },
     TelescopePromptBorder   = { fg = c.magenta,          bg = c.bg_float },
@@ -14,7 +14,7 @@ function M.get(c, opts)
     TelescopeResultsComment = { fg = c.comment },
   }
 
-	return ret
+	return palette
 end
 
 return M

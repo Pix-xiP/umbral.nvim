@@ -1,5 +1,5 @@
 local Config = require("umbral.config")
-local Util = require("umbral.util")
+local util = require("umbral.util")
 
 local M = {}
 
@@ -78,7 +78,7 @@ me = vim.fn.fnamemodify(me, ":h")
 
 function M.get_group(name)
 	---@type {get: umbral.HighlightsFn, url: string}
-	return Util.mod("umbral.groups." .. name)
+	return util.mod("umbral.groups." .. name)
 end
 
 ---@param colors ColorScheme
@@ -136,7 +136,7 @@ function M.setup(colors, opts)
 	table.sort(names)
 
 	local cache_key = opts.style
-	local cache = opts.cache and Util.cache.read(cache_key)
+	local cache = opts.cache and util.cache.read(cache_key)
 
 	local inputs = {
 		colors = colors,
@@ -156,9 +156,9 @@ function M.setup(colors, opts)
 				ret[k] = v
 			end
 		end
-		Util.resolve(ret)
+		util.resolve(ret)
 		if opts.cache then
-			Util.cache.write(cache_key, { groups = ret, inputs = inputs })
+			util.cache.write(cache_key, { groups = ret, inputs = inputs })
 		end
 	end
 	opts.on_highlights(ret, colors)

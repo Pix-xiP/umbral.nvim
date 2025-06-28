@@ -6,11 +6,12 @@ M.url = "https://github.com/folke/lazy.nvim"
 function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
-  local pallete = {
+  local palette = {
     LazyProgressDone = { fg = c.bright_magenta, bold = true },
     LazyProgressTodo = { fg = c.fg,             bold = true },
   }
-	return pallete
+
+	return palette
 end
 
 return M

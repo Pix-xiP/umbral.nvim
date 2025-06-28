@@ -6,10 +6,12 @@ M.url = "https://github.com/folke/flash.nvim"
 function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
-  return {
+  local palette = {
     FlashBackdrop = { fg = c.comment },
     FlashLabel    = { fg = c.yellow, bg = c.border_color, bold = true },
   }
+
+	return palette
 end
 
 return M

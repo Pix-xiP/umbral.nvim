@@ -6,8 +6,9 @@ local M = {}
 
 ---@type umbral.HighlightsFn
 function M.get(c, opts)
+	_ = opts
   -- stylua: ignore
-  return {
+  local palette = {
     TestVal                     = { bg = c.magenta, fg = c.bg},
 
     Comment                     = { fg = c.comment, style = opts.styles.comments }, -- any comment
@@ -147,6 +148,8 @@ function M.get(c, opts)
     diffIndexLine               = { fg = c.magenta },
     helpExample                 = { fg = c.comment },
   }
+
+	return palette
 end
 
 return M

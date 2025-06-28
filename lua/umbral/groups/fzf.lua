@@ -3,7 +3,8 @@ local M = {}
 M.url = "https://github.com/ibhagwan/fzf-lua"
 
 ---@type umbral.HighlightsFn
-function M.get(c)
+function M.get(c, opts)
+	_ = opts
   -- stylua: ignore
   local palette = {
     FzfLuaBorder        = { bg = c.black, fg = c.border_highlight, },

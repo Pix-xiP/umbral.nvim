@@ -1,11 +1,12 @@
-local Util = require("umbral.util")
+local util = require("umbral.util")
 
 local M = {}
 
 ---@type umbral.HighlightsFn
-function M.get(c)
+function M.get(c, opts)
+	_ = opts
   -- stylua: ignore
-  return {
+  local palette = {
     ["@lsp.type.boolean"]                      = "@boolean",
     ["@lsp.type.builtinType"]                  = "@type.builtin",
     ["@lsp.type.comment"]                      = "@comment",
@@ -16,7 +17,7 @@ function M.get(c)
     ["@lsp.type.escapeSequence"]               = "@string.escape",
     ["@lsp.type.formatSpecifier"]              = "@markup.list",
     ["@lsp.type.generic"]                      = "@variable",
-    ["@lsp.type.interface"]                    = { fg = Util.blend_fg(c.blue, 0.7) },
+    ["@lsp.type.interface"]                    = { fg = util.blend_fg(c.blue, 0.7) },
     ["@lsp.type.keyword"]                      = "@keyword",
     ["@lsp.type.lifetime"]                     = "@keyword.storage",
     ["@lsp.type.namespace"]                    = "@module",
@@ -42,14 +43,16 @@ function M.get(c)
     ["@lsp.typemod.operator.injected"]         = "@operator",
     ["@lsp.typemod.string.injected"]           = "@string",
     ["@lsp.typemod.struct.defaultLibrary"]     = "@type.builtin",
-    ["@lsp.typemod.type.defaultLibrary"]       = { fg = Util.blend_bg(c.blue, 0.8) },
-    ["@lsp.typemod.typeAlias.defaultLibrary"]  = { fg = Util.blend_bg(c.blue, 0.8) },
+    ["@lsp.typemod.type.defaultLibrary"]       = { fg = util.blend_bg(c.blue, 0.8) },
+    ["@lsp.typemod.typeAlias.defaultLibrary"]  = { fg = util.blend_bg(c.blue, 0.8) },
     ["@lsp.typemod.variable.callable"]         = "@function",
     ["@lsp.typemod.variable.defaultLibrary"]   = "@variable.builtin",
     ["@lsp.typemod.variable.injected"]         = "@variable",
     ["@lsp.typemod.variable.static"]           = "@constant",
 
   }
+
+	return palette
 end
 
 return M

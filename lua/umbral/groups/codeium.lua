@@ -6,11 +6,11 @@ M.url = "https://github.com/Exafunction/codeium.nvim"
 function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
-  local ret = {
+  local palette = {
     CodeiumSuggestion = { fg = c.terminal.black_bright},
   }
 
-	return ret
+	return palette
 end
 
 return M

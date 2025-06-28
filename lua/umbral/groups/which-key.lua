@@ -6,7 +6,7 @@ M.url = "https://github.com/folke/which-key.nvim"
 function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
-  return {
+  local pallete = {
     WhichKey          = { bg = c.black, fg = c.yellow},
     WhichKeyGroup     = { bg = c.black, fg = c.cyan,},
     WhichKeyDesc      = { bg = c.black, fg = c.magenta },
@@ -14,6 +14,8 @@ function M.get(c, opts)
     WhichKeyNormal    = { bg = c.black },
     WhichKeyValue     = { bg = c.black, fg = c.dark_fg},
   }
+
+	return pallete
 end
 
 return M

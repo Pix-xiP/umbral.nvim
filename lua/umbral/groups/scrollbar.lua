@@ -6,7 +6,7 @@ M.url = "https://github.com/petertriho/nvim-scrollbar"
 function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
-  local ret = {
+  local pallete = {
     ScrollbarError        = { fg = c.error, bg = c.none           },
     ScrollbarErrorHandle  = { fg = c.error, bg = c.bright_black   },
     ScrollbarHandle       = { fg = c.none, bg = c.bright_black    },
@@ -22,7 +22,7 @@ function M.get(c, opts)
     ScrollbarWarnHandle   = { fg = c.warning, bg = c.bright_black },
   }
 
-	return ret
+	return pallete
 end
 
 return M

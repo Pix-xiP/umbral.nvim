@@ -6,8 +6,9 @@ M.url = "https://github.com/rcarriga/nvim-notify"
 
 ---@type umbral.HighlightsFn
 function M.get(c, opts)
+	_ = opts
   -- stylua: ignore
-  return {
+  local palette = {
     NotifyBackground  = { fg = c.fg, bg = c.bg },
     NotifyDEBUGBody   = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
     NotifyDEBUGBorder = { fg = util.blend_bg(c.comment, 0.3), bg = opts.transparent and c.none or c.bg },
@@ -30,6 +31,8 @@ function M.get(c, opts)
     NotifyWARNIcon    = { fg = c.warning },
     NotifyWARNTitle   = { fg = c.warning },
   }
+
+	return palette
 end
 
 return M

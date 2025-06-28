@@ -6,12 +6,12 @@ M.url = "https://github.com/zbirenbaum/copilot.lua"
 function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
-  local ret = {
+  local palette = {
     CopilotAnnotation = { fg = c.terminal.black_bright },
     CopilotSuggestion = { fg = c.terminal.black_bright },
   }
 
-	return ret
+	return palette
 end
 
 return M

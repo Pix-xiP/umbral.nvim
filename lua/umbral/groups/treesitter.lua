@@ -1,11 +1,12 @@
-local Util = require("umbral.util")
+local util = require("umbral.util")
 
 local M = {}
 
 ---@type umbral.HighlightsFn
 function M.get(c, opts)
+	_ = opts
   -- stylua: ignore
-  local ret = {
+  local palette = {
     ["@annotation"]                   = "PreProc",
     ["@attribute"]                    = "PreProc",
     ["@boolean"]                      = "Boolean",
@@ -87,24 +88,25 @@ function M.get(c, opts)
     ["@tag"]                          = "Label",
     ["@tag.attribute"]                = "@property",
     ["@tag.delimiter"]                = "Delimiter",
-    ["@tag.delimiter.tsx"]            = { fg = Util.blend_bg(c.blue, 0.7) },
+    ["@tag.delimiter.tsx"]            = { fg = util.blend_bg(c.blue, 0.7) },
     ["@tag.tsx"]                      = { fg = c.red },
     ["@tag.javascript"]               = { fg = c.red },
     ["@type"]                         = "Type",
-    ["@type.builtin"]                 = { fg = Util.blend_bg(c.cyan, 0.8) },
+    ["@type.builtin"]                 = { fg = util.blend_bg(c.cyan, 0.8) },
     ["@type.definition"]              = "Typedef",
     ["@type.qualifier"]               = "@keyword",
     ["@variable"]                     = { fg = c.fg, style = opts.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"]             = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@variable.member"]              = { fg = c.primary }, -- For fields.
     ["@variable.parameter"]           = { fg = c.yellow }, -- For parameters of a function.
-    ["@variable.parameter.builtin"]   = { fg = Util.blend_fg(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
+    ["@variable.parameter.builtin"]   = { fg = util.blend_fg(c.yellow, 0.8) }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
   }
 
 	for i, color in ipairs(c.rainbow) do
-		ret["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true }
+		palette["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true }
 	end
-	return ret
+
+	return palette
 end
 
 return M

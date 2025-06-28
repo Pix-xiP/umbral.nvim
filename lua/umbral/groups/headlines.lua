@@ -2,20 +2,20 @@ local M = {}
 
 M.url = "https://github.com/lukas-reineke/headlines.nvim"
 
----@type tokyonight.HighlightsFn
+---@type umbral.HighlightsFn
 function M.get(c, opts)
 	_ = opts
   -- stylua: ignore
-  local ret = {
-    CodeBlock = { bg = c.bg_dark},
+  local palette = {
+    CodeBlock = { bg = c.dark_bg },
     Headline  = "Headline1",
   }
 
 	for i, color in ipairs(c.rainbow) do
-		ret["Headline" .. i] = { bg = require("umbral.util").blend_bg(color, 0.05) }
+		palette["Headline" .. i] = { bg = require("umbral.util").blend_bg(color, 0.05) }
 	end
 
-	return ret
+	return palette
 end
 
 return M
