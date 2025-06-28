@@ -70,7 +70,7 @@ M.plugins = {
   ["vim-sneak"]                     = "sneak",
   -- ["vimwiki"]                       = "vimwiki",
   ["which-key.nvim"]                = "which-key",
-  -- ["yanky.nvim"]                    = "yanky"
+  ["yanky.nvim"]                    = "yanky"
 }
 
 local me = debug.getinfo(1, "S").source:sub(2)
