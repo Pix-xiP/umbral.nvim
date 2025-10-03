@@ -41,7 +41,7 @@ function M.get(c, opts)
     ModeMsg                     = { fg = c.bright_black, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea                     = { fg = c.comment}, -- Area for messages and cmdline
     MoreMsg                     = { fg = c.red}, -- |more-prompt|
-    NonText                     = { fg = c.mid_dark}, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText                     = { fg = util.blend_fg(c.mid_dark, 0.5)}, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal                      = { fg = c.fg, bg = opts.transparent and c.none or c.bg }, -- normal text
     NormalNC                    = { fg = c.fg, bg = opts.transparent and c.none or opts.dim_inactive and c.dark_bg or c.bg }, -- normal text in non-current windows
     NormalSB                    = { fg = c.cursor_color, bg = c.bg_sidebar }, -- normal text in sidebar
