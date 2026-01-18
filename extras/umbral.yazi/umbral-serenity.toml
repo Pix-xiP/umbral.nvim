@@ -1,0 +1,28 @@
+[manager]
+	# TODO: attach sublime style color scheme file at some point for preview code highlighting.
+
+	cwd = { fg = "#dfb7e8", italic = true }
+
+	# hovered 
+	hovered         = { bg = "#262440" }
+	preview_hovered = { bg = "#262440" }
+
+	# find
+	find_keyword  = { fg = "#0b0b14", bg = "#a048ed", bold = true }
+	find_position = { fg = "#ff7ab2", bg = "#262440", bold = true }
+
+	# tab 
+	tab_active   = { fg = "#9ca7ff", bg = "#262440" }
+	tab_inactive = { fg = "#0b0b14", bg = "#9ca7ff" }
+	tab_width    = 1
+
+	# count 
+	count_selected = { fg = "#dfb7e8", bg = "#9ca7ff" }
+	count_copied   = { fg = "#dfb7e8", bg = "#c081fa" }
+	count_cut      = { fg = "#dfb7e8", bg = "#d14e7c" }
+
+	# border 
+	border_symbol = "│"
+	border_style  = { fg = "#6f7ef0" }
+
+[mode]

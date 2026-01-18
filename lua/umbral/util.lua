@@ -160,7 +160,7 @@ function M.cache.read(key)
 end
 
 function M.cache.clear()
-	for _, style in ipairs({ "void" }) do
+	for _, style in ipairs({ "void", "abyss", "serenity" }) do
 		uv.fs_unlink(M.cache.file(style))
 	end
 end
