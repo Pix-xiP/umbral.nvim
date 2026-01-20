@@ -68,7 +68,7 @@ function M.get(c, opts)
     ["@markup.strong"]                = { bold = true },
     ["@markup.underline"]             = { underline = true },
     -- ["@module"]                       = "Directory",
-    ["@module"]                       = { fg = c.bright_magenta}, -- packages, modules, imports, etc
+    ["@module"]                       = { fg = c.magenta}, -- packages, modules, imports, etc
     ["@module.builtin"]               = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@namespace.builtin"]            = "@variable.builtin",
     ["@none"]                         = {},
@@ -91,7 +91,8 @@ function M.get(c, opts)
     ["@tag.tsx"]                      = { fg = c.red },
     ["@tag.javascript"]               = { fg = c.red },
     ["@type"]                         = "Type",
-    ["@type.builtin"]                 = { fg = util.blend_bg(c.cyan, 0.8) },
+    -- ["@type.builtin"]                 = { fg = util.blend_bg(c.bright_blue, 0.8) },
+    ["@type.builtin"]                 = { fg = c.bright_blue },
     ["@type.definition"]              = "Typedef",
     ["@type.qualifier"]               = "@keyword",
     ["@variable"]                     = { fg = c.fg, style = opts.styles.variables }, -- Any variable name that does not have another highlight.

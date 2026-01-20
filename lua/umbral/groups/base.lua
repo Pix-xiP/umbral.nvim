@@ -33,7 +33,7 @@ function M.get(c, opts)
     SignColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.comment }, -- column where |signs| are displayed
     SignColumnSB                = { bg = c.bg_sidebar, fg = c.fg }, -- column where |signs| are displayed
     Substitute                  = { bg = c.bright_red, fg = c.black }, -- |:substitute| replacement text highlighting
-    LineNr                      = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    LineNr                      = { fg = util.blend_fg(c.fg_gutter, 0.3)}, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr                = { fg = c.bright_red, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     LineNrAbove                 = { fg = c.bright_black }, -- TODO: perhaps we use a version of the lsp_hint here?
     LineNrBelow                 = { fg = c.bright_black },
@@ -95,7 +95,8 @@ function M.get(c, opts)
     Statement                   = { fg = c.magenta }, -- (preferred) any statement
     String                      = { fg = c.primary }, -- a string constant: "this is a string"
     Todo                        = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    Type                        = { fg = c.bright_blue}, -- (preferred) int, long, char, etc.:
+    -- Type                        = { fg = c.bright_blue}, -- (preferred) int, long, char, etc.:
+    Type                        = { fg = c.orange}, -- (preferred) int, long, char, etc.:
     Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
     debugBreakpoint             = { bg = util.blend_bg(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
     debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
